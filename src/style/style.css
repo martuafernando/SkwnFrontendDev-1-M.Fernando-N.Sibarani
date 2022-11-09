@@ -107,7 +107,7 @@ nav{
 }
 
 nav .container div:nth-child(2){
-  display: none;
+  display: flex;
 }
 
 nav .container{
@@ -118,10 +118,26 @@ nav .container{
 nav ul.flex{
   gap: 24px;
   margin: 0;
+  display: none;
 }
 
 nav .flex:nth-child(4){
   gap: 16px;
+  align-items: center;
+  display: none;
+}
+
+nav .flex:nth-child(4) a:first-child{
+  background-color: var(--yellow);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+nav .flex:nth-child(4) a:nth-child(2){
+  background-color: var(--brown);
+  color: var(--yellow);
+  padding: 16px;
+  border-radius: 8px;
 }
 
 nav ul.flex li{
@@ -413,6 +429,11 @@ footer .flex:nth-child(2) p{
 
 /* Small */
 @media (min-width: 576px) {
+  header, section, footer{
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
   nav{
     padding-left: 64px;
     padding-right: 64px;
@@ -452,6 +473,7 @@ footer .flex:nth-child(2) p{
   #partner > .flex{
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
   }
 
   #partner > .flex > .flex{
@@ -461,7 +483,7 @@ footer .flex:nth-child(2) p{
   
   #categories > .flex{
     flex-direction: row;
-    justify-content: space-between;;
+    justify-content: space-between;
     gap: 16px;
   }
 
@@ -483,7 +505,7 @@ footer .flex:nth-child(2) p{
 
   #best-seller > .container > .flex img{
     border-radius: 12px;
-    width: 20vw;
+    width: 12vw;
     max-width: 768px;
   }
 
@@ -493,10 +515,6 @@ footer .flex:nth-child(2) p{
 
   #best-seller > .container > .flex:nth-child(2){
     justify-content: center;
-  }
-
-  nav .container div:nth-child(2){
-    display: none;
   }
 
   footer > .flex:first-child{
@@ -520,10 +538,21 @@ footer .flex:nth-child(2) p{
 
 /* Medium */
 @media (min-width: 768px) {
-  section,
-  header,
-  footer{
-    padding: 64px;
+
+  nav .flex:nth-child(4){
+    display: flex;
+  }
+
+  nav ul.flex{
+    display: flex;
+  }
+
+  nav .container div:nth-child(2){
+    display: none;
+  }
+
+  nav .container div:nth-child(2){
+    display: none;
   }
 }
 
